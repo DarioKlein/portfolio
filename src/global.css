@@ -27,12 +27,12 @@
   --popover: #2c2f32;
   --popover-foreground: #fafafa;
   --popover-border: #2a2e32;
-  --primary: #a477e4;
+  --primary: #995af2;
   --primary-foreground: #ffffff;
   --secondary: #2c3237;
   --secondary-foreground: #fafafa;
   --muted: #2c2f32;
-  --muted-foreground: #b2b6bb;
+  --muted-foreground: #acb0b9;
   --accent: #2c2f32;
   --accent-foreground: #fafafa;
   --destructive: #d93939;
@@ -41,7 +41,7 @@
   --ring: #a477e4;
   --chart-1: #a477e4;
   --chart-2: #3a8bd0;
-  --chart-3: #2a9d7f;
+  --chart-3: #20df9f;
   --chart-4: #a37ccf;
   --chart-5: #3395cc;
 }
@@ -54,4 +54,17 @@ body {
     linear-gradient(to bottom, #0f0c29, #1a1a2e, #0f2027);
   background-attachment: fixed;
   color: white;
+}
+
+@keyframes pointerEffect {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.pointer-effect {
+  animation: pointerEffect 1s linear infinite;
 }

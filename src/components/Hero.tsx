@@ -4,11 +4,11 @@ import { useEffect, useMemo, useState } from 'react'
 export function Hero() {
   const codeParts = useMemo(
     () => [
-      { text: 'const', className: 'text-[var(--chart-3)]' },
+      { text: 'const', className: 'text-[var(--color-font-const)]' },
       { text: ' ', className: '' },
-      { text: 'developer', className: 'text-foreground' },
+      { text: 'developer', className: 'text-[var(--main-color-font)]' },
       { text: ' = ', className: '' },
-      { text: '"Dario Klein"', className: 'text-[var(--primary)]' },
+      { text: '"Dario Klein"', className: 'text-[var(--color-font-passione)]' },
       { text: ';', className: '' },
     ],
     []
@@ -69,29 +69,31 @@ export function Hero() {
   }, [typedIndex, charIndex, isDeleting, codeParts])
   return (
     <div className="w-screen flex justify-center h-screen items-center flex-col gap-4">
-      <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold tracking-tight flex flex-col items-center">
+      <h1 className="text-5xl sm:text-6xl md:text-8xl text-[var(--main-color-font)] font-bold tracking-tight flex flex-col items-center">
         Desenvolvedor
-        <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">Full-Stack</span>
+        <span className="bg-gradient-to-r from-[var(--color-font-title-fulltack-01)] to-[var(--color-font-title-fulltack-02)] bg-clip-text text-transparent">
+          Full-Stack
+        </span>
       </h1>
-      <p className="md:text-xl text-[var(--muted-foreground)] max-w-[45rem] w-full text-center text-sm sm:text-lg">
-        Criando experiências digitais modernas com React, Node.js, TypeScript, Java Spring Boot e tecnologias de ponta
+      <p className="md:text-xl text-[var(--subtitle-color-font)] max-w-[45rem] w-full text-center text-sm sm:text-lg">
+        Criando experiências digitais modernas com React, Node.js, TypeScript, Java Spring Boot e tecnologias de ponta.
       </p>
       <div className="flex sm:gap-5 mt-4 gap-3">
         <a
           href=""
-          className="sm:w-45 sm:h-10 w-44 h-9 bg-[var(--primary)] flex items-center justify-center rounded text-sm font-medium text-[var(--primary-foreground)] gap-3 border border-[var(--button-outline)] hover:bg-[var(--foreground)] hover:text-[var(--primary)] hover:border-[var(--primary)] transition-colors group"
+          className="sm:w-45 sm:h-10 w-44 h-9 bg-[var(--color-button-hero-01)] flex items-center justify-center rounded text-sm font-medium text-[var(--white-color-font)] gap-3 border border-[var(--color-button-outline)] hover:bg-[var(--white-color-font)] hover:text-[var(--color-button-hero-01)] hover:border-[var(--color-button-hero-01)] transition-colors group"
         >
           Ver Projetos
           <FiArrowRight className="transition-transform group-hover:translate-x-2" />
         </a>
-        <button className="sm:w-45 sm:h-10 w-44 h-9 bg-[#11131780] flex items-center justify-center rounded text-sm font-medium text-[var(--primary-foreground)] border border-[var(--button-outline)] hover:bg-[#4b49492a] transition-colors gap-3 cursor-pointer">
+        <button className="sm:w-45 sm:h-10 w-44 h-9 bg-[var(--color-button-hero-02)] flex items-center justify-center rounded text-sm font-medium text-[var(--white-black-color-font)] border border-[var(--color-button-outline)] hover:bg-[var(--color-button-hero-02-hover)] transition-colors gap-3 cursor-pointer">
           <FiDownload />
           Baixar CV
         </button>
       </div>
-      <div className="mt-8 bg-[#1b1d2280] px-4 py-2 rounded border border-[var(--button-outline)]">
+      <div className="mt-8 bg-[var(--color-background-dev)] px-4 py-2 rounded border border-[var(--color-button-outline)]">
         <div className="w-full">
-          <code className="font-mono text-sm">
+          <code className="font-mono text-sm text-[var(--white-black-color-font)]">
             {renderedCode}
             <span className="opacity-70 animate-pulse">
               <span className="pointer-effect">|</span>

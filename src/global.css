@@ -6,52 +6,69 @@
   --font-serif: Georgia, serif;
   --font-mono: 'JetBrains Mono', Menlo, Monaco, monospace;
 
-  --button-outline: rgba(255, 255, 255, 0.1);
-  --badge-outline: rgba(255, 255, 255, 0.05);
-  --elevate-1: rgba(255, 255, 255, 0.04);
-  --elevate-2: rgba(255, 255, 255, 0.09);
-  --background: #141924;
-  --foreground: #fafafa;
-  --border: #323c46;
-  --card: #1c1f23;
-  --card-foreground: #fafafa;
-  --card-border: #292d31;
-  --sidebar: #141a1e;
-  --sidebar-foreground: #fafafa;
-  --sidebar-border: #252a2f;
-  --sidebar-primary: #a477e4;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #1c2022;
-  --sidebar-accent-foreground: #fafafa;
-  --sidebar-ring: #a477e4;
-  --popover: #2c2f32;
-  --popover-foreground: #fafafa;
-  --popover-border: #2a2e32;
-  --primary: #995af2;
-  --primary-foreground: #ffffff;
-  --secondary: #2c3237;
-  --secondary-foreground: #fafafa;
-  --muted: #2c2f32;
-  --muted-foreground: #acb0b9;
-  --accent: #2c2f32;
-  --accent-foreground: #fafafa;
-  --destructive: #d93939;
-  --destructive-foreground: #ffffff;
-  --input: #595f6a;
-  --ring: #a477e4;
-  --chart-1: #a477e4;
-  --chart-2: #3a8bd0;
-  --chart-3: #20df9f;
-  --chart-4: #a37ccf;
-  --chart-5: #3395cc;
+  --main-color-font: #fafafa;
+  --secondary-color-font: #989aa5;
+  --white-color-font: #fff;
+  --black-color-font: #00000;
+  --white-black-color-font: #fff;
+  --subtitle-color-font: #acb0b9;
+
+  --color-font-title-fulltack-01: #ab49ff;
+  --color-font-title-fulltack-02: #317fff;
+  --color-font-const: #20d296;
+  --color-font-passione: #8650d2;
+
+  --color-button-hero-01: #995af2;
+  --color-button-hero-02: #11131780;
+  --color-button-hero-02-hover: #4b49492a;
+  --color-button-outline: rgba(255, 255, 255, 0.1);
+
+  --color-background-01: rgba(120, 64, 200, 0.3);
+  --color-background-02: rgba(64, 120, 255, 0.3);
+  --color-background-03: #0f0c29;
+  --color-background-04: #1a1a2e;
+  --color-background-05: #0f2027;
+  --color-background-navbar-mobile: #111317fd;
+  --color-background-writter: #181b22;
+  --color-background-dev: #1b1d2280;
+  --color-background-button: rgba(255, 255, 255, 0.04);
+}
+
+.light {
+  --main-color-font: #21242C;
+  --secondary-color-font: #989aa5;
+  --white-color-font: #fff;
+  --black-color-font: #00000;
+  --white-black-color-font: #000;
+  --subtitle-color-font: #777D88;
+
+  --color-font-title-fulltack-01: #7E36E2;
+  --color-font-title-fulltack-02: #317fff;
+  --color-font-const: #20d296;
+  --color-font-passione: #8650d2;
+
+  --color-button-hero-01: #7E36E2;
+  --color-button-hero-02: #fff;
+  --color-button-hero-02-hover: #e8eefa;
+  --color-button-outline: rgba(0, 0, 0, 0.2);
+
+  --color-background-01: #dbc1f1;
+  --color-background-02: #dbc1f1;
+  --color-background-03: #fafafa;
+  --color-background-04: #e8eefa;
+  --color-background-05: #fafafa;
+  --color-background-navbar-mobile: #ffff;
+  --color-background-writter: #181b22;
+  --color-background-dev: #fafafa;
+  --color-background-button: rgba(34, 34, 34, 0.233);
 }
 
 body {
   min-height: 100vh;
   margin: 0;
-  background: radial-gradient(circle at top left, rgba(120, 64, 200, 0.3), transparent 40%),
-    radial-gradient(circle at bottom right, rgba(64, 120, 255, 0.3), transparent 40%),
-    linear-gradient(to bottom, #0f0c29, #1a1a2e, #0f2027);
+  background: radial-gradient(circle at top left, var(--color-background-01), transparent 40%),
+    radial-gradient(circle at bottom right, var(--color-background-02), transparent 40%),
+    linear-gradient(to bottom, var(--color-background-03), var(--color-background-04), var(--color-background-05));
   background-attachment: fixed;
   color: white;
 }
@@ -67,4 +84,5 @@ body {
 
 .pointer-effect {
   animation: pointerEffect 1s linear infinite;
+  color: var(--white-black-color-font);
 }

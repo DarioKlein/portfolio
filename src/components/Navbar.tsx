@@ -25,8 +25,26 @@ export function Navbar() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <header className="fixed w-screen h-16 flex flex-col justify-center">
+    <header
+      className={`fixed w-screen h-16 flex flex-col justify-center border-b transition-colors ease-in-out duration-500
+    ${
+      scrolled
+        ? 'bg-[var(--color-background-navbar)] border-[var(--color-button-outline)]'
+        : 'bg-none border-transparent'
+    }
+  `}
+    >
       <nav className="flex items-center lg:justify-evenly md:pl-10 md:pr-10 justify-between">
         <h1 className="text-sm ml-5 md:ml-0 font-bold font-mono text-[var(--main-color-font)] hover:bg-[var(--color-background-dev)] transition-colors cursor-pointer px-2 py-1 rounded-md lg:text-xl">
           {'<Dario Klein />'}
@@ -46,13 +64,22 @@ export function Navbar() {
           })}
         </ul>
         <div className="flex lg:gap-2 gap-4 md:gap-1 mr-5 md:mr-0">
-          <a href="" className="p-2.5 hover:bg-[var(--color-background-button)] rounded-md hidden md:inline-flex">
+          <a
+            href="https://github.com/DarioKlein"
+            className="p-2.5 hover:bg-[var(--color-background-button)] rounded-md hidden md:inline-flex"
+          >
             <SiGithub className="text-[var(--white-black-color-font)]" />
           </a>
-          <a href="" className="p-2.5 hover:bg-[var(--color-background-button)] rounded-md hidden md:inline-flex">
+          <a
+            href="https://www.linkedin.com/in/d%C3%A1rio-klein-7a49ab281/"
+            className="p-2.5 hover:bg-[var(--color-background-button)] rounded-md hidden md:inline-flex"
+          >
             <SiLinkedin className="text-[var(--white-black-color-font)]" />
           </a>
-          <a href="" className="p-2.5 hover:bg-[var(--color-background-button)] rounded-md hidden md:inline-flex">
+          <a
+            href="https://www.instagram.com/darioklein.ab/"
+            className="p-2.5 hover:bg-[var(--color-background-button)] rounded-md hidden md:inline-flex"
+          >
             <SiInstagram className="text-[var(--white-black-color-font)]" />
           </a>
           <button
@@ -74,7 +101,7 @@ export function Navbar() {
           </button>
         </div>
         <div
-          className={`fixed transition duration-300 ease-in-out flex w-screen md:hidden bg-[var(--color-background-navbar-mobile)] mt-87 px-10 py-4 flex-col gap-5 ${
+          className={`fixed transition duration-300 ease-in-out flex w-screen md:hidden bg-[var(--color-background-navbar-mobile)] border-b-2 border-b-black mt-87 px-10 py-4 flex-col gap-5 ${
             isMenuOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
         >
@@ -94,15 +121,15 @@ export function Navbar() {
           </ul>
           <div className="flex gap-2">
             <a
-              href=""
-              className="w-full text-[var(--white-black-color-font)] flex justify-center items-center gap-4 h-10 border border-[var(--color-button-outline)] rounded"
+              href="https://github.com/DarioKlein"
+              className="w-full text-[var(--white-black-color-font)] flex justify-center items-center gap-4 h-10 border border-[var(--color-button-outline)] rounded hover:bg-[var(--color-button-hero-02-hover)] transition"
             >
               <SiGithub className="text-[var(--white-black-color-font)]" />
               GitHub
             </a>
             <a
-              href=""
-              className="w-full text-[var(--white-black-color-font)] flex justify-center items-center gap-4 h-10 border border-[var(--color-button-outline)] rounded"
+              href="https://www.linkedin.com/in/d%C3%A1rio-klein-7a49ab281/"
+              className="w-full text-[var(--white-black-color-font)] flex justify-center items-center gap-4 h-10 border border-[var(--color-button-outline)] rounded hover:bg-[var(--color-button-hero-02-hover)] transition"
             >
               <SiLinkedin className="text-[var(--white-black-color-font)]" />
               LinkedIn

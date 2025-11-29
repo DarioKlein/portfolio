@@ -32,22 +32,24 @@
   --color-background-writter: #181b22;
   --color-background-dev: #1b1d2280;
   --color-background-button: rgba(255, 255, 255, 0.04);
+  --color-background-about: #111317;
+  --color-background-navbar: #121418;
 }
 
 .light {
-  --main-color-font: #21242C;
+  --main-color-font: #21242c;
   --secondary-color-font: #989aa5;
   --white-color-font: #fff;
   --black-color-font: #00000;
   --white-black-color-font: #000;
-  --subtitle-color-font: #777D88;
+  --subtitle-color-font: #777d88;
 
-  --color-font-title-fulltack-01: #7E36E2;
+  --color-font-title-fulltack-01: #7e36e2;
   --color-font-title-fulltack-02: #317fff;
   --color-font-const: #20d296;
   --color-font-passione: #8650d2;
 
-  --color-button-hero-01: #7E36E2;
+  --color-button-hero-01: #7e36e2;
   --color-button-hero-02: #fff;
   --color-button-hero-02-hover: #e8eefa;
   --color-button-outline: rgba(0, 0, 0, 0.2);
@@ -61,6 +63,7 @@
   --color-background-writter: #181b22;
   --color-background-dev: #fafafa;
   --color-background-button: rgba(34, 34, 34, 0.233);
+  --color-background-navbar: #fafafa;
 }
 
 body {
@@ -71,6 +74,7 @@ body {
     linear-gradient(to bottom, var(--color-background-03), var(--color-background-04), var(--color-background-05));
   background-attachment: fixed;
   color: white;
+  overflow-x: hidden;
 }
 
 @keyframes pointerEffect {
